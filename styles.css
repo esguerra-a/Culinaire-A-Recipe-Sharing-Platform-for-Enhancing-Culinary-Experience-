@@ -178,7 +178,7 @@ h6 {
 
 /* BLOGS <MAIN> STYLES*/
 #blogs-header-container {
-    background-image: url(../Blogs_Images/blogs-header.jpg);
+    background-image: url(Blogs_Images/blogs-header.jpg);
 }
 
 /*ABOUT US <MAIN> STYLES */
@@ -219,7 +219,7 @@ h6 {
 }
 
 .header-container {
-    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0,0,0,50)), url("../Home_Images/header.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0,0,0,50)), url("Home_Images/header.jpg");
     background-size: cover;
     background-position: center;
     align-content: center;
@@ -246,7 +246,7 @@ h6 {
 /*FAVORITES MAIN STYLES*/
 
 #favorites-header-container {
-    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0,0,0,50)), url("../Favorites_Images/header_weekly.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0,0,0,50)), url("Favorites_Images/header_weekly.png");
     background-size: cover;
     background-position: center;
 }
@@ -382,7 +382,7 @@ h6 {
     justify-self: center;
     width: 100%;
     max-width: 1920px;
-    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0,0,0,100)), url("../AboutUs_Images/header.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0,0,0,100)), url("AboutUs_Images/header.jpg");
     background-position: center;
     background-size: cover;
     display: inline-block;
@@ -542,7 +542,7 @@ h6 {
 }
 
 #featured-item-1 {
-    background-image: url(../Recipe-Pages/recipePicture/BananawithChocolateSauce.jpg);
+    background-image: url(Recipe-Pages/recipePicture/BananawithChocolateSauce.jpg);
     overflow: hidden;
     scale: 0.9;
     z-index: 0;
@@ -554,14 +554,14 @@ h6 {
 }
 
 #featured-item-2 {
-    background-image: url(../Home_Images/tastymozarellabuns.jpg);
+    background-image: url(Home_Images/tastymozarellabuns.jpg);
     scale: 1.1;
     z-index: 1;
 
 }
 
 #featured-item-3 {
-    background-image: url(../Home_Images/realamericanhamburger.jpg);
+    background-image: url(Home_Images/realamericanhamburger.jpg);
     overflow: hidden;
     scale: 0.9;
     z-index: 0;
@@ -643,67 +643,67 @@ h6 {
 }
 
 #breakfast-category {
-    background: url(../Home_Images/breakfast_img.jpg);
+    background: url(Home_Images/breakfast_img.jpg);
     background-position: center;
     background-size: cover;
 }
 
 #main-category {
-    background: url(../Home_Images/maindishes_img.jpg);
+    background: url(Home_Images/maindishes_img.jpg);
     background-size: cover;
     background-position: center;
 }
 
 #appetizers-category {
-    background: url(../Home_Images/appetizers_img.jpg);
+    background: url(Home_Images/appetizers_img.jpg);
     background-size: cover;
     background-position: center;
 }
 
 #soups-category {
-    background: url(../Home_Images/soups_img.jpg);
+    background: url(Home_Images/soups_img.jpg);
     background-size: cover;
     background-position: center;
 }
 
 #salads-category {
-    background: url(../Home_Images/salads_img.jpg);
+    background: url(Home_Images/salads_img.jpg);
     background-size: cover;
     background-position: center;
 }
 
 #desserts-category {
-    background: url(../Home_Images/desserts_img.jpg);
+    background: url(Home_Images/desserts_img.jpg);
     background-size: cover;
     background-position: center;
 }
 
 #chicken-adobo {
-    background: url(../Home_Images/chickenadobo.jpg);;
+    background: url(Home_Images/chickenadobo.jpg);;
     background-size: cover;
     background-position: center;
 }
 
 #real-american-hamburger {
-    background: url(../Home_Images/realamericanhamburger.jpg);
+    background: url(Home_Images/realamericanhamburger.jpg);
     background-size: cover;
     background-position: center;
 }
 
 #tomato-salad {
-    background: url(../Home_Images/tomatosaladwbasil.jpg);
+    background: url(Home_Images/tomatosaladwbasil.jpg);
     background-size: cover;
     background-position: center;
 }
 
 #filet-mignon {
-    background: url(../Home_Images/filet-mignon.avif);
+    background: url(Home_Images/filet-mignon.avif);
     background-size: cover;
     background-position: center;
 }
 
 #cassava-cake {
-    background: url(../Home_Images/cassava-cake.jpg);
+    background: url(Home_Images/cassava-cake.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -796,19 +796,19 @@ h6 {
 }
 
 #spice-banner {
-    background-image: url(../BLOGS-DETAILED/SPICES/spice-up-your-life.jpg);
+    background-image: url(BLOGS-DETAILED/SPICES/spice-up-your-life.jpg);
 }
 
 #five-ways-banner {
-    background-image: url(../BLOGS-DETAILED/5-WAYS/banner-5-Ways-Healthy-Cooking-Classes-Can-Help-With-Your-Diet.jpg);
+    background-image: url(BLOGS-DETAILED/5-WAYS/banner-5-Ways-Healthy-Cooking-Classes-Can-Help-With-Your-Diet.jpg);
 }
 
 #kitchen-hacks-banner {
-    background-image: url(../BLOGS-DETAILED/KITCHEN-HACKS/banner.jpg);
+    background-image: url(BLOGS-DETAILED/KITCHEN-HACKS/banner.jpg);
 }
 
 #budget-friendly-banner {
-    background-image: url(../BLOGS-DETAILED/BUDGET-FRIENDLY/budget-friendly-bites.jpg);
+    background-image: url(BLOGS-DETAILED/BUDGET-FRIENDLY/budget-friendly-bites.jpg);
 }
 
 .blog-detail-banner {
