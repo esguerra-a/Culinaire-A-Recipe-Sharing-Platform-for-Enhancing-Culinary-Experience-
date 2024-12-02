@@ -22,124 +22,124 @@ let move = 0;
 let itemNumber = [5, 10, 3, 4, 8, 4, 4, 4]; // Items for each category
 const recipeDetails = {
     "Chicken Adobo": {
-        image: "/Recipe-Pages/recipePicture/ChickenAdobo.jpg",
+        image: "Recipe-Pages/recipePicture/ChickenAdobo.jpg",
         description: "A Filipino dish of chicken stewed in soy sauce, vinegar, and spices.",
-        htmlPage: "/Chicken-Adobo.html"
+        htmlPage: "Chicken-Adobo.html"
     },
     "Chicken and Gravy": {
-        image: "/Recipe-Pages/recipePicture/ChickenGravy.jpg",
+        image: "Recipe-Pages/recipePicture/ChickenGravy.jpg",
         description: "Crispy fried chicken paired with rich and creamy gravy.",
-        htmlPage: "/Chicken-Gravy.html"
+        htmlPage: "Chicken-Gravy.html"
     },
     "Tasty Mozarella Buns": { 
-        image: "/Recipe-Pages/recipePicture/TastyMozarellaBuns.JPG",
+        image: "Recipe-Pages/recipePicture/TastyMozarellaBuns.JPG",
         description: "Soft buns filled with gooey mozzarella cheese.",
-        htmlPage: "/Tasty-Mozarella-Buns.html"
+        htmlPage: "Tasty-Mozarella-Buns.html"
     },
     "Avocado Salad": { 
-        image: "/Recipe-Pages/recipePicture/AvocadoSalad.jpg",
+        image: "Recipe-Pages/recipePicture/AvocadoSalad.jpg",
         description: "A fresh and creamy salad made with ripe avocados and greens.",
-        htmlPage: "/Avocado-Salad.html"
+        htmlPage: "Avocado-Salad.html"
     },
     "Mushroom Pizza with Black Olives": { 
-        image: "/Recipe-Pages/recipePicture/MushroomPizza.jpg",
+        image: "Recipe-Pages/recipePicture/MushroomPizza.jpg",
         description: "Thin crust pizza topped with mushrooms and black olives.",
-        htmlPage: "/Mushroom-Pizza.html"
+        htmlPage: "Mushroom-Pizza.html"
     },
     "Real American Hamburger": { 
-        image: "/Recipe-Pages/recipePicture/RealAmericanHamburger.jpg",
+        image: "Recipe-Pages/recipePicture/RealAmericanHamburger.jpg",
         description: "A classic American burger with a juicy beef patty and fresh toppings.",
-        htmlPage: "/Real-American-Hamburger.html"
+        htmlPage: "Real-American-Hamburger.html"
     },
     "Lechon Kawali": { 
-        image: "/Recipe-Pages/recipePicture/LechonKawali.jpg",
+        image: "Recipe-Pages/recipePicture/LechonKawali.jpg",
         description: "Crispy fried pork belly served with a savory dipping sauce.",
-        htmlPage: "/Lechon-Kawali.html"
+        htmlPage: "Lechon-Kawali.html"
     },
     "Smash Cheeseburger": { 
-        image: "/Recipe-Pages/recipePicture/SmashBurger.jpg",
+        image: "Recipe-Pages/recipePicture/SmashBurger.jpg",
         description: "A mouthwatering burger with a smashed beef patty and melted cheese.",
-        htmlPage: "/Smash-Burger.html"
+        htmlPage: "Smash-Burger.html"
     },
     "Shrimp Sinigang": { 
-        image: "/Recipe-Pages/recipePicture/ShrimpSinigang.jpg",
+        image: "Recipe-Pages/recipePicture/ShrimpSinigang.jpg",
         description: "A sour Filipino soup with shrimp, tamarind, and fresh vegetables.",
-        htmlPage: "/Shrimp-Sinigang.html"
+        htmlPage: "Shrimp-Sinigang.html"
     },
     "Kare-kare": { 
-        image: "/Recipe-Pages/recipePicture/KareKare.jpg",
+        image: "Recipe-Pages/recipePicture/KareKare.jpg",
         description: "A traditional Filipino stew with peanut sauce and assorted meats.",
-        htmlPage: "/Kare-kare.html"
+        htmlPage: "Kare-kare.html"
     },
     "Italian Pasta": { 
-        image: "/Recipe-Pages/recipePicture/ItalianPasta.jpg",
+        image: "Recipe-Pages/recipePicture/ItalianPasta.jpg",
         description: "Classic pasta tossed in a rich and flavorful Italian sauce.",
-        htmlPage: "/Italian-Pasta.html"
+        htmlPage: "Italian-Pasta.html"
     },
     "Pork Sisig": { 
-        image: "/Recipe-Pages/recipePicture/PorkSisig.jpg",
+        image: "Recipe-Pages/recipePicture/PorkSisig.jpg",
         description: "A sizzling Filipino dish made of chopped pork and savory seasonings.",
-        htmlPage: "/Pork-Sisig.html"
+        htmlPage: "Pork-Sisig.html"
     },
     "Tomato Salad": { 
-        image: "/Recipe-Pages/recipePicture/TomatoSalad.jpg",
+        image: "Recipe-Pages/recipePicture/TomatoSalad.jpg",
         description: "A refreshing salad featuring ripe tomatoes, onions, and olive oil.",
-        htmlPage: "/Tomato-Salad.html"
+        htmlPage: "Tomato-Salad.html"
     },
     "Filet Mignon": { 
-        image: "/Recipe-Pages/recipePicture/FiletMignon.jpg",
+        image: "Recipe-Pages/recipePicture/FiletMignon.jpg",
         description: "Tender and juicy steak cooked to perfection.",
-        htmlPage: "/Filet-Mignon.html"
+        htmlPage: "Filet-Mignon.html"
     },
     "Creamy Mushroom Soup": { 
-        image: "/Recipe-Pages/recipePicture/CreamyMushroomSoup.jpg",
+        image: "Recipe-Pages/recipePicture/CreamyMushroomSoup.jpg",
         description: "A comforting soup with creamy mushrooms and herbs.",
-        htmlPage: "/Creamy-Mushroom-Soup.html"
+        htmlPage: "Creamy-Mushroom-Soup.html"
     },
     "Chicken Noodle Soup": { 
-        image: "/Recipe-Pages/recipePicture/ChickenNoodleSoup.jpg",
+        image: "Recipe-Pages/recipePicture/ChickenNoodleSoup.jpg",
         description: "A hearty soup with tender chicken, noodles, and vegetables.",
-        htmlPage: "/Chicken-Noodle-Soup.html"
+        htmlPage: "Chicken-Noodle-Soup.html"
     },
     "Clam Chowder": { 
-        image: "/Recipe-Pages/recipePicture/ClamChowder.jpg",
+        image: "Recipe-Pages/recipePicture/ClamChowder.jpg",
         description: "Rich and creamy soup with clams, potatoes, and celery.",
-        htmlPage: "/Clam-Chowder.html"
+        htmlPage: "Clam-Chowder.html"
     },
     "Greek Salad": { 
-        image: "/Recipe-Pages/recipePicture/GreekSalad.jpg",
+        image: "Recipe-Pages/recipePicture/GreekSalad.jpg",
         description: "A vibrant salad with fresh cucumbers, tomatoes, olives, and feta cheese.",
-        htmlPage: "/Greek-Salad.html"
+        htmlPage: "Greek-Salad.html"
     },
     "Caesar Salad": { 
-        image: "/Recipe-Pages/recipePicture/CaesarSalad.jpg",
+        image: "Recipe-Pages/recipePicture/CaesarSalad.jpg",
         description: "Crisp lettuce tossed in Caesar dressing with croutons and parmesan.",
-        htmlPage: "/CaesarSalad.html"
+        htmlPage: "CaesarSalad.html"
     },
     "Classic Strawberry Shortcake": { 
-        image: "/Recipe-Pages/recipePicture/ClassicStrawberryShortcake.jpg",
+        image: "Recipe-Pages/recipePicture/ClassicStrawberryShortcake.jpg",
         description: "A delightful dessert with layers of sponge cake, strawberries, and cream.",
-        htmlPage: "/Classic-Strawberry-Shortcake.html"
+        htmlPage: "Classic-Strawberry-Shortcake.html"
     },
     "Cassava Cake": { 
-        image: "/Recipe-Pages/recipePicture/CassavaCake.jpg",
+        image: "Recipe-Pages/recipePicture/CassavaCake.jpg",
         description: "A Filipino dessert made from grated cassava and coconut milk.",
-        htmlPage: "/CassavaCake.html"
+        htmlPage: "CassavaCake.html"
     },
     "Banana with Chocolate Sauce": { 
-        image: "/Recipe-Pages/recipePicture/BananawithChocolateSauce.jpg",
+        image: "Recipe-Pages/recipePicture/BananawithChocolateSauce.jpg",
         description: "Sweet bananas drizzled with a rich chocolate sauce.",
-        htmlPage: "/BananaWithChocolate.html"
+        htmlPage: "BananaWithChocolate.html"
     },
     "Cheesecake": { 
-        image: "/Recipe-Pages/recipePicture/Cheesecake.jpg",
+        image: "Recipe-Pages/recipePicture/Cheesecake.jpg",
         description: "A smooth and creamy dessert with a graham cracker crust.",
-        htmlPage: "/Cheese-Cake.html"
+        htmlPage: "Cheese-Cake.html"
     }
 };
 
 // Image sources
-const pictureSrc = ["/Recipe-Pages/Category-images/BREAKFAST.jpg", "/Recipe-Pages/Category-images/LUNCH.png", "/Recipe-Pages/Category-images/SNACKS.jpg", "/Recipe-Pages/Category-images/desserts_img.jpg", "/Recipe-Pages/Category-images/SmashBurger.jpg", "/Recipe-Pages/Category-images/ShrimpSinigang.jpg", "/Recipe-Pages/Category-images/Salad.jpg", "/Recipe-Pages/Category-images/Dinner.jpg"];
+const pictureSrc = ["Recipe-Pages/Category-images/BREAKFAST.jpg", "Recipe-Pages/Category-images/LUNCH.png", "Recipe-Pages/Category-images/SNACKS.jpg", "Recipe-Pages/Category-images/desserts_img.jpg", "Recipe-Pages/Category-images/SmashBurger.jpg", "Recipe-Pages/Category-images/ShrimpSinigang.jpg", "Recipe-Pages/Category-images/Salad.jpg", "Recipe-Pages/Category-images/Dinner.jpg"];
 const categoryLabel = ["BREAKFAST", "LUNCH", "APPETIZER", "DESSERT", "MAIN DISH", "SOUP", "SALAD", "DINNER"];
 let isNextGrid = false;
 // Track the currently selected option
