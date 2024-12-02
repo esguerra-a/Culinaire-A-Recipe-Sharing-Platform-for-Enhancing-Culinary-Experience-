@@ -32,7 +32,7 @@ const recipeDetails = {
         htmlPage: "Chicken-Gravy.html"
     },
     "Tasty Mozarella Buns": { 
-        image: "Recipe-Pages/recipePicture/TastyMozarellaBuns.JPG",
+        image: "Recipe-Pages/recipePicture/TastyMozarellaBuns.jpg",
         description: "Soft buns filled with gooey mozzarella cheese.",
         htmlPage: "Tasty-Mozarella-Buns.html"
     },
