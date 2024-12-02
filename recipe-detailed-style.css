@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Julius+Sans+One&family=Kumbh+Sans:wght@100..900&display=swap');
+
+:root {
+    --green: #193F01;
+    --orange: #A44D08;
+}
+
+body {
+    margin: 0;
+}
+
+/* Header and nav styles */
+#chosen-nav-item {
+    color: #F4E0AF;
+    background-color: #193F01;
+    text-decoration: underline !important;
+}
+
+.non-index-title-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 1.5em !important;
+    background-color: var(--green);
+}
+
+.non-index-nav-container {
+    font-family: "Instrument Sans", sans-serif;
+    font-weight: bold;
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    gap: 1em;
+}
+
+.non-index-nav-item {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+}
+
+.non-index-title {
+    font-family: "Kumbh Sans", sans-serif;
+    color: white;
+    font-size: 2rem;
+    margin: 0; 
+}
+
+.non-index-nav-item:hover {
+    text-decoration: underline !important;
+}
+
+#burger-menu {
+    display: none;
+    cursor:pointer;
+    position:relative;
+}
+
+#burger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Main content styles*/
+.container-flex{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10vh;
+    margin-left: 3%;
+    padding: 1rem;
+}
+.hero {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+
+}
+
+.back-link {
+    padding: 0rem;
+    color: #333;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.back-link:hover{
+    color: #3a5a40;
+    font-weight: bolder;
+}
+
+.recipe-header {
+    width: 100%;     
+}
+
+.recipe-info {
+    display: block;
+    padding: 1rem;
+}
+
+.recipe-title {
+    font-size: 2.5rem;
+    display: inline-block;
+    font-family: "Kumbh Sans", sans-serif;
+    font-weight: bolder;
+}
+
+.recipe-description {
+    color: #666;
+    font-family: "Jost", sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+    
+}
+
+.recipe-meta {
+    display: flex;
+    gap: 0;
+    margin-bottom: 2rem;
+    list-style-position: inside;
+    margin-top: 2%;
+    margin-left: 11%;
+}
+
+.recipe-meta .meta-item:nth-child(2){
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.meta-item {
+    padding: 0.5rem 1rem;
+    text-align: center;
+    font-family: "Jost", sans-serif;
+    font-weight: bold;
+    max-width: 30%;
+    word-break: normal;
+}
+
+.recipe-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.recipe-content section > h2{
+    font-family: "Inter", sans-serif;
+    font-weight: bolder;
+    border-bottom: 2px solid black;
+    padding-bottom: 2%;
+}
+
+.ingredients {
+    list-style-position: inside;
+}
+
+.ingredients li {
+    margin-bottom: 0.5rem;
+    font-family: "Jost", sans-serif;
+    font-weight: 900;
+}
+
+.instructions {
+    background-color: #FFF9E6;
+    padding: 2rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.instructions h2{
+    font-family: "Inter", sans-serif;
+    color: black !important;
+    font-weight: bolder;    
+    
+}
+
+iframe {
+    border: none; /* Removes border */
+    max-width: 100%; /* Makes the iframe responsive */
+    height: 238px;
+    width:  424px;
+    align-self: center;
+    margin: 2rem 0;
+    aspect-ratio: 16/9;
+}
+
+.instructions h2 {
+    margin-bottom: 1rem;
+}
+
+.step {
+    margin-bottom: 1.5rem;
+    font-family: "Jost", sans-serif;
+}
+
+#suggested-recipes {
+    padding: 0rem 0rem;
+    background-color: white ;
+}
+
+#suggested-recipes h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: "Julius Sans One", sans-serif;
+}
+
+.background-suggested-recipes{
+    padding: 3rem 1rem;
+    width: 100%;
+    background-color: #DED369;
+}
+
+.recipe-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    text-decoration:none;
+}
+
+.recipe-card a{
+    text-decoration: none;
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recipe-card h3 {
+    padding: 1rem;
+    text-align: center;
+    color: black;
+}
+
+.suggested-recipe-title{
+    font-family: "Jost", sans-serif;
+    font-weight: bolder;
+}
+.suggested-recipe-image:hover{
+    opacity: 90%;
+}
+.suggested-recipe-title:hover{
+    color:#3a5a40;  
+}
+
+footer {
+    font-family: "Inter", sans-serif;
+    width: 100%;
+    background-color: var(--orange);
+    color: #DED369;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    /* Header styles for mobile*/
+    #navLinks {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #333333;
+        width: 100%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    #navLinks a {
+        text-align: left;
+        padding: 0.5em 1em;
+        color: white;
+        background-color: #333333;
+        border-bottom: 1px solid hsl(97, 97%, 15%);
+        transition: 0.4s ease-in-out;
+        font-size: 1rem;
+        margin: 10px 5px;
+    }
+
+    #navLinks a:hover {
+        background-color: #444;
+        transition: 0.3s ease-in-out;
+    }
+
+    #burger-menu {
+        display: block;
+    }
+    
+    #navLinks.active {
+        display: flex;
+        transform: translate(0);
+        transition: 0.5s ease-in-out;
+    }
+
+    #burger-menu.toggled span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6.25px);
+    }
+    
+    #burger-menu.toggled span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    #burger-menu.toggled span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6.25px);
+    }
+
+    .index-title {
+        font-size: 2rem;
+        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .home-title-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5em 1.5em;
+        background-color: var(--green);
+        position: sticky;
+    }
+    /* Main content styles*/
+      
+    .recipe-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .recipe-meta {
+        gap: 1rem;
+        margin: 10px 0px;
+    }
+
+    .recipe-title {
+        font-size: 1.5rem;
+    }
+
+    .hero {
+        height: 300px;
+    }
+    
+    .back-link{
+        font-size: 0.5rem;
+    }
+    
+    .recipe-cards{
+        grid-template-columns: 1fr;
+    }
+}
+    
+@media (max-width: 468px){
+    .container-flex{
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+        gap: 7px;
+    }
+    .back-link{
+        align-self: flex-start;
+        margin: 1rem 0.3rem;
+    }
+    footer{
+        margin-top: 0%;
+        font-size: 0.6rem;
+    }     
+}

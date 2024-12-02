@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Friendly Bites</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <header class="non-index-title-bar">
+        <h1 class="non-index-title">CULINAIRE</h1>
+        <nav class="non-index-nav-container" id="navLinks">
+          <a href="index.html" class="non-index-nav-item">Home</a>
+          <a href="All-Recipes.html" class="non-index-nav-item">Recipes</a>
+          <a href="Favorites.html" class="non-index-nav-item">Favorites</a>
+          <a href="Blogs.html" id="chosen-nav-item" class="non-index-nav-item" aria-current="page">Blogs</a>
+          <a href="AboutUs.html" class="non-index-nav-item">About Us</a>
+        </nav>
+        <div id="burger-menu" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+    </header>
+    <main>
+        <div class="blog-detail-grid">
+            <div>
+                <div id="kitchen-hacks-banner" class="blog-detail-banner">
+                    <div class="blog-detail-author">
+                        <img class="user-icon" src="https://s2.svgbox.net/hero-outline.svg?ic=user-circle" alt="Author avatar" width="50" height="50">
+                        <span class="jost-semibold-30">Adrian Esguerra</span>
+                    </div>
+                </div>
+                <article class="blog-post">
+                    <h1>Kitchen Hacks</h1>
+                    <p class="blog-post-date">August 15, 2024</p>
+                    <p>Kitchen hacks can save time and effort while cooking, making meal prep smoother and more enjoyable. For example, peeling garlic can be tedious, but smashing the clove with the flat side of a knife quickly loosens the skin for easy removal. If your bread goes stale, don't throw it away—just sprinkle it with water and bake for 5-10 minutes to revive its fresh, crusty texture. Small adjustments like these can reduce waste and make common kitchen tasks faster.</p>
+                    <p>Other useful hacks include keeping herbs fresh by storing them in a glass of water, loosely covered with a plastic bag, which helps them last longer. You can also prevent pots from boiling over by placing a wooden spoon across the top—a simple trick that avoids messy spills. Need softened butter fast? Grating cold butter or microwaving it in short bursts will give you spreadable butter in no time. These small kitchen tips can greatly improve efficiency and reduce stress while cooking.</p>
+                </article>
+            </div>
+            <aside class="blog-detail-sidebar">
+                <h2>RECENT BLOGS</h2>
+                <div>
+                    <a href="5-Ways.html" class="recent-post">
+                        <img src="../BLOGS-DETAILED/5-WAYS/5-Ways-Healthy-Cooking-Classes-Can-Help-With-Your-Diet.jpg" alt="Cooking classes-image">
+                        <h3>5 Ways Healthy Cooking Classes can Help Your Diet</h3>
+                    </a>
+                </div>
+                <div>
+                    <a href="Bites.html" class="recent-post">
+                        <img src="../BLOGS-DETAILED/BUDGET-FRIENDLY/budget-friendly-bites.jpg" alt="Budget-Friendly-Bites-image">
+                        <h3>Budget Friendly Bites</h3>
+                    </a>
+                </div>
+                <div>
+                    <a href="Spice.html" class="recent-post">
+                        <img src="../BLOGS-DETAILED/SPICES/spice-up-your-life.jpg" alt="spice-up-your-life-image">
+                        <h3>Spice Up Your Life</h3>
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer>
+        Copyright &copy; Culinaire 2024. All Rights Reserved.
+    </footer>
+</body>
+</html>

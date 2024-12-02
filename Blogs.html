@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Culinaire - Blogs</title>
+</head>
+<body>
+    <header class="non-index-title-bar">
+        <h1 class="non-index-title">CULINAIRE</h1>
+        <nav class="non-index-nav-container" id="navLinks">
+          <a href="index.html" class="non-index-nav-item">Home</a>
+          <a href="All-Recipes.html" class="non-index-nav-item">Recipes</a>
+          <a href="Favorites.html" class="non-index-nav-item">Favorites</a>
+          <a href="Blogs.html" id="chosen-nav-item" class="non-index-nav-item" aria-current="page">Blogs</a>
+          <a href="AboutUs.html" class="non-index-nav-item">About Us</a>
+        </nav>
+        <div id="burger-menu" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+    </header>
+    <main class="main-container">
+        <div id="blogs-header-container" class="header-container">
+            <h1 class="main-header inria-serif-white"><b>BLOGS</b></h1>
+            <h3 class="sub-header inria-serif-white">Cooking Tips & Reviews</h3>
+        </div>
+        <section class="section-container">
+            <h2 class="julius-black">TIPS OF THE WEEK</h2>
+            <img id="tips-of-the-week-image" class="item-image" src="../Blogs_Images/tips-of-the-week.jpg" alt="Pan-frying technique illustration" width="1024" height="512">
+            <p class="tips-of-the-week-text jost-normal">Pan-frying is the happy medium between sautéing and deep frying. 
+                When you pan-fry, you cook food in oil, but not nearly as much as deep frying. 
+                Instead of completely covering the food in oil, with pan-frying, the oil may come up about halfway on the food. 
+                You go about it as you would sautéing, though you use more oil and need a pan with high enough sides to contain the needed oil.</p>
+        </section>
+        <section class="section-container-mustard-bg">
+            <div id="blogs-grid-container" class="grid-container">
+                <article class="grid-item">
+                    <img class="item-image" src="../Blogs_Images/kitchen-hacks.jpg" alt="Various kitchen utensils and ingredients showcasing kitchen hacks" width="560" height="400">
+                    <h3 class="jost-semibold-30">Kitchen Hacks</h3>
+                    <p class="inter-black">Discover ingenious shortcuts and techniques to streamline your cooking process. 
+                        Learn how to chop vegetables faster, prevent food from sticking to pans, and make the most of your leftovers.</p>
+                    <div class="flex-container">
+                        <img class="user-icon" src="https://s2.svgbox.net/hero-outline.svg?ic=user-circle" alt="Author avatar" width="50" height="50">
+                        <h4 class="inria-serif-black">Adrian Esguerra</h4>
+                    </div>
+                    <a href="Kitchen-Hacks.html"><button class="view-button">Read More</button></a>
+                </article>
+                <article class="grid-item">
+                    <img class="item-image" src="../Blogs_Images/budget-friendly-bites.jpg" alt="Affordable and healthy meal ingredients" width="560" height="400">
+                    <h3 class="jost-semibold-30">Budget-Friendly Bites</h3>
+                    <p class="inter-black">Who says healthy eating has to break the bank? Explore a variety of budget-friendly recipes that are both nutritious and satisfying. 
+                        From pantry staples to seasonal produce, learn how to create delicious meals without sacrificing flavor or quality.</p>
+                    <div class="flex-container">
+                        <img class="user-icon" src="https://s2.svgbox.net/hero-outline.svg?ic=user-circle" alt="Author avatar" width="50" height="50">
+                        <h4 class="inria-serif-black">Jonathan Melu</h4>
+                    </div>
+                    <a href="Bites.html"><button class="view-button">Read More</button></a>
+                </article>
+                <article class="grid-item">
+                    <img class="item-image" src="../Blogs_Images/spice-up-your-life.jpg" alt="Colorful array of spices and herbs" width="560" height="400">
+                    <h3 class="jost-semibold-30">Spice Up Your Life</h3>
+                    <p class="inter-black">Embark on a culinary adventure with a global exploration of spices and herbs. 
+                        Discover the unique flavors and health benefits of ingredients from different cultures.</p>
+                    <div class="flex-container">
+                        <img class="user-icon" src="https://s2.svgbox.net/hero-outline.svg?ic=user-circle" alt="Author avatar" width="50" height="50">
+                        <h4 class="inria-serif-black">Adrian Esguerra</h4>
+                    </div>
+                    <a href="Spice.html"><button class="view-button">Read More</button></a>
+                </article>
+                <article class="grid-item">
+                    <img class="item-image" src="../Blogs_Images/5-Ways-Healthy-Cooking-Classes-Can-Help-With-Your-Diet.jpg" alt="People participating in a cooking class" width="560" height="400">
+                    <h3 class="jost-semibold-30">5 Ways Healthy Cooking Classes can Help Your Diet</h3>
+                    <p class="inter-black">Explore how cooking classes can introduce you to healthy eating habits. 
+                        From learning nutritious recipes to understanding portion control, discover five key benefits.</p>
+                    <div class="flex-container">
+                        <img class="user-icon" src="https://s2.svgbox.net/hero-outline.svg?ic=user-circle" alt="Author avatar" width="50" height="50">
+                        <h4 class="inria-serif-black">Jonathan Melu</h4>
+                    </div>
+                    <a href="5-Ways.html"><button class="view-button">Read More</button></a>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        Copyright &copy; 2024 Culinaire. All Rights Reserved.
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

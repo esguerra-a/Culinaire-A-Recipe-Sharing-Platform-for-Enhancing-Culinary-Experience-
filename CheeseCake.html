@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheesecake - Culinaire</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="recipe-detailed-style.css">  
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <header class="non-index-title-bar">
+        <h1 class="non-index-title"><strong>CULINAIRE</strong></h1>
+        <nav class="non-index-nav-container" id="navLinks">
+          <a href="index.html" class="non-index-nav-item">Home</a>
+          <a href="All-Recipes.html" id="chosen-nav-item" class="non-index-nav-item" aria-current="page">Recipes</a>
+          <a href="Favorites.html" class="non-index-nav-item">Favorites</a>
+          <a href="Blogs.html" class="non-index-nav-item">Blogs</a>
+          <a href="AboutUs.html" class="non-index-nav-item" >About Us</a>
+        </nav>
+        <div id="burger-menu" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+    </header>
+    <header class="recipe-header">
+        <div class="container-flex">
+            <a href="/All-Recipes.html" class="back-link">← Back to Recipes</a>
+            <div id="recipe-info">
+                <h1 class="recipe-title">Cheesecake</h1>
+                <p class="recipe-description">A smooth and creamy dessert with a graham cracker crust.</p>
+            </div>
+        </div>
+        <img src="/Recipe-Pages/recipePicture/Cheesecake.jpg" class="hero"> </img>
+    </header>
+    <div class="recipe-meta">
+        <div class="meta-item">
+            <strong>CATEGORY</strong><br>
+            DESSERT
+        </div>
+        <div class="meta-item">
+            <strong>CALORIES</strong><br>
+            250 kcal per serving
+        </div>
+        <div class="meta-item">
+            <strong>TIME</strong><br>
+            1 hour
+        </div>
+    </div>  
+    <main class="recipe-content">  
+        <section> 
+            <h2>INGREDIENTS</h2>
+            <ul class="ingredients">
+                <li>2 cups graham cracker crumbs</li>
+                <li>1/4 cup sugar</li>
+                <li>1/2 cup melted butter</li>
+                <li>3 packages (8 oz each) cream cheese, softened</li>
+                <li>1 cup sugar</li>
+                <li>1 tsp vanilla extract</li>
+                <li>3 large eggs</li>
+                <li>1 cup sour cream</li>
+                <li>1/4 cup sugar (for sour cream topping)</li>
+            </ul>
+        </section>
+        <section class="instructions">
+            <h2>INSTRUCTIONS</h2>
+            <iframe 
+                src="https://www.youtube.com/embed/wNLxiRcNsPg" 
+                frameborder="0" 
+                width="424" 
+                height="238" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+            <div class="step">
+                <strong>Step 1.</strong>
+                <p>Preheat oven to 325°F (163°C). Grease a 9-inch springform pan with butter.</p>
+            </div>
+            <div class="step">
+                <strong>Step 2.</strong>
+                <p>In a medium bowl, mix graham cracker crumbs, sugar, and melted butter. Press mixture into the bottom of the prepared pan to form the crust. Bake for 10 minutes, then remove from oven and let cool.</p>
+            </div>
+            <div class="step">
+                <strong>Step 3.</strong>
+                <p>In a large bowl, beat the cream cheese until smooth. Add sugar and vanilla extract, and beat until combined.</p>
+            </div>
+            <div class="step">
+                <strong>Step 4.</strong>
+                <p>Beat in eggs one at a time, mixing well after each addition.</p>
+            </div>
+            <div class="step">
+                <strong>Step 5.</strong>
+                <p>Pour the cream cheese mixture over the cooled crust. Bake for 50-55 minutes, or until the center is just set.</p>
+            </div>
+            <div class="step">
+                <strong>Step 6.</strong>
+                <p>While the cheesecake is baking, mix sour cream and sugar in a bowl. Once the cheesecake is done, spread sour cream topping over the top and return to the oven for 10 more minutes.</p>
+            </div>
+            <div class="step">
+                <strong>Step 7.</strong>
+                <p>Allow the cheesecake to cool completely before refrigerating for at least 4 hours. Slice and serve chilled!</p>
+            </div>
+        </section>
+    </main>
+    <section id="suggested-recipes">
+        <h2>SUGGESTED RECIPE</h2>
+        <div class="background-suggested-recipes">
+            <div class="recipe-cards">
+                <div class="recipe-card">
+                    <a href="BananaWithChocolateSauce.html">
+                        <img src="Recipe-Pages/recipePicture/BananaWithChocolateSauce.jpg" alt="Banana with Chocolate Sauce" class="suggested-recipe-image">
+                        <h3 class="suggested-recipe-title">Banana with Chocolate Sauce</h3>
+                    </a>
+                </div>
+                <div class="recipe-card">
+                    <a href="CassavaCake.html">
+                        <img src="Recipe-Pages/recipePicture/CassavaCake.jpg" alt="Cassava Cake" class="suggested-recipe-image">
+                        <h3 class="suggested-recipe-title">Cassava Cake</h3>
+                    </a>
+                </div>
+                <div class="recipe-card">
+                    <a href="Pork-Sisig.html">
+                        <img src="Recipe-Pages/recipePicture/PorkSisig.jpg" alt="Pork Sisig" class="suggested-recipe-image">
+                        <h3 class="suggested-recipe-title">Pork Sisig</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Copyright © 2024 Culinaire. All Rights Reserved</p>
+    </footer>
+</body>
+</html>

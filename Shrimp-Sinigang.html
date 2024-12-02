@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrimp Sinigang - Culinaire</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="recipe-detailed-style.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <header class="non-index-title-bar">
+        <h1 class="non-index-title"><strong>CULINAIRE</strong></h1>
+        <nav class="non-index-nav-container" id="navLinks">
+          <a href="index.html" class="non-index-nav-item">Home</a>
+          <a href="All-Recipes.html" id="chosen-nav-item" class="non-index-nav-item" aria-current="page">Recipes</a>
+          <a href="Favorites.html" class="non-index-nav-item">Favorites</a>
+          <a href="Blogs.html" class="non-index-nav-item">Blogs</a>
+          <a href="AboutUs.html" class="non-index-nav-item" >About Us</a>
+        </nav>
+        <div id="burger-menu" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+    </header>
+    <header class="recipe-header">
+        <div class="container-flex">
+            <a href="/All-Recipes.html" class="back-link">← Back to Recipes</a>
+            <div id="recipe-info">
+                <h1 class="recipe-title">Shrimp Sinigang</h1>
+                <p class="recipe-description">A sour Filipino soup with shrimp, tamarind, and fresh vegetables.</p>
+            </div>
+        </div>
+        <img src="/Recipe-Pages/recipePicture/ShrimpSinigang.jpg" class="hero"> </img>
+    </header>
+    <div class="recipe-meta">
+        <div class="meta-item">
+            <strong>CATEGORY</strong><br>
+            SOUP
+        </div>
+        <div class="meta-item">
+            <strong>CALORIES</strong><br>
+            180 kcal per serving
+        </div>
+        <div class="meta-item">
+            <strong>TIME</strong><br>
+            45 minutes
+        </div>
+    </div>  
+    <main class="recipe-content">  
+        <section> 
+            <h2>INGREDIENTS</h2>
+            <ul class="ingredients">
+                <li>1 lb shrimp, peeled and deveined</li>
+                <li>2 medium tomatoes, quartered</li>
+                <li>1 onion, quartered</li>
+                <li>1 packet tamarind soup base</li>
+                <li>1 cup long green beans, cut into 2-inch pieces</li>
+                <li>1 cup water spinach (kangkong) or other leafy greens</li>
+                <li>1 medium eggplant, sliced</li>
+                <li>2-3 pieces of chili (optional)</li>
+                <li>Salt and fish sauce to taste</li>
+                <li>6 cups water</li>
+            </ul>
+        </section>
+        <section class="instructions">
+            <h2>INSTRUCTIONS</h2>
+            <iframe 
+                src="https://www.youtube.com/embed/7QKr1oy4Ykc" 
+                frameborder="0" 
+                width="424" 
+                height="238" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+            <div class="step">
+                <strong>Step 1.</strong>
+                <p>In a large pot, combine the shrimp, tomatoes, onion, and water. Bring to a boil over medium heat.</p>
+            </div>
+            <div class="step">
+                <strong>Step 2.</strong>
+                <p>Once boiling, add the tamarind soup base and stir well. Let it cook for about 5 minutes.</p>
+            </div>
+            <div class="step">
+                <strong>Step 3.</strong>
+                <p>Add the green beans, eggplant, and chili (if using). Let it cook for another 5-7 minutes until the vegetables are tender.</p>
+            </div>
+            <div class="step">
+                <strong>Step 4.</strong>
+                <p>Season with salt and fish sauce to taste. Adjust the sourness by adding more tamarind if needed.</p>
+            </div>
+            <div class="step">
+                <strong>Step 5.</strong>
+                <p>Finally, add the water spinach and cook for another 2 minutes, then remove from heat.</p>
+            </div>
+            <div class="step">
+                <strong>Step 6.</strong>
+                <p>Serve hot with steamed rice and enjoy!</p>
+            </div>
+        </section>
+    </main>
+    <section id="suggested-recipes">
+        <h2>SUGGESTED RECIPE</h2>
+        <div class="background-suggested-recipes">
+            <div class="recipe-cards">
+                <div class="recipe-card">
+                    <a href="Chicken-Adobo.html">
+                        <img src="Recipe-Pages/recipePicture/ChickenAdobo.jpg" alt="Chicken Adobo" class="suggested-recipe-image">
+                        <h3 class="suggested-recipe-title">Chicken Adobo</h3>
+                    </a>
+                </div>
+                <div class="recipe-card">
+                    <a href="CaesarSalad.html">
+                        <img src="Recipe-Pages/recipePicture/CaesarSalad.jpg" alt="Caesar Salad" class="suggested-recipe-image">
+                        <h3 class="suggested-recipe-title">Caesar Salad</h3>
+                    </a>
+                </div>
+                <div class="recipe-card">
+                    <a href="Tasty-Mozarella-Buns.html">
+                        <img src="Recipe-Pages/recipePicture/TastyMozarellaBuns.jpg" alt="Tasty Mozarella Buns" class="suggested-recipe-image">
+                        <h3 class="suggested-recipe-title">Tasty Mozarella Buns</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Copyright © 2024 Culinaire. All Rights Reserved</p>
+    </footer>
+</body>
+</html>

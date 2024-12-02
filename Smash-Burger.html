@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smash Burger - Culinaire</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="recipe-detailed-style.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <header class="non-index-title-bar">
+        <h1 class="non-index-title"><strong>CULINAIRE</strong></h1>
+        <nav class="non-index-nav-container" id="navLinks">
+          <a href="index.html" class="non-index-nav-item">Home</a>
+          <a href="All-Recipes.html" id="chosen-nav-item" class="non-index-nav-item" aria-current="page">Recipes</a>
+          <a href="Favorites.html" class="non-index-nav-item">Favorites</a>
+          <a href="Blogs.html" class="non-index-nav-item">Blogs</a>
+          <a href="AboutUs.html" class="non-index-nav-item" >About Us</a>
+        </nav>
+        <div id="burger-menu" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+    </header>
+    <header class="recipe-header">
+        <div class="container-flex">
+            <a href="/All-Recipes.html" class="back-link">← Back to Recipes</a>
+            <div id="recipe-info">
+                <h1 class="recipe-title">Smash Burger</h1>
+                <p class="recipe-description">A juicy, crispy burger with a perfect crispy edge and tender center.</p>
+            </div>
+        </div>
+        <img src="/Recipe-Pages/recipePicture/smashburger.jpg" class="hero"> </img>
+    </header>
+    <div class="recipe-meta">
+        <div class="meta-item">
+            <strong>CATEGORY</strong><br>
+            Main Dish
+        </div>
+        <div class="meta-item">
+            <strong>CALORIES</strong><br>
+            400 kcal per serving
+        </div>
+        <div class="meta-item">
+            <strong>TIME</strong><br>
+            30 minutes
+        </div>
+    </div>  
+    <main class="recipe-content">  
+        <section> 
+            <h2>INGREDIENTS</h2>
+            <ul class="ingredients">
+                <li>1 lb ground beef (80% lean, 20% fat)</li>
+                <li>4 hamburger buns</li>
+                <li>4 slices cheddar cheese</li>
+                <li>Salt and pepper to taste</li>
+                <li>1 tablespoon vegetable oil</li>
+                <li>4 slices pickles</li>
+                <li>1 small onion, thinly sliced</li>
+                <li>Ketchup and mustard (optional)</li>
+            </ul>
+        </section>
+        <section class="instructions">
+            <h2>INSTRUCTIONS</h2>
+            <iframe 
+                src="https://www.youtube.com/embed/nq9WnmCGoFQ" 
+                frameborder="0" 
+                width="424" 
+                height="238" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+            <div class="step">
+                <strong>Step 1.</strong>
+                <p>Preheat a cast iron skillet or griddle over medium-high heat and add a tablespoon of vegetable oil.</p>
+            </div>
+            <div class="step">
+                <strong>Step 2.</strong>
+                <p>While the skillet is heating up, divide the ground beef into 4 equal portions and roll them into balls. Season with salt and pepper.</p>
+            </div>
+            <div class="step">
+                <strong>Step 3.</strong>
+                <p>Once the skillet is hot, place a beef ball onto the skillet and smash it down with a spatula to form a thin patty. Cook for 2-3 minutes until crispy, then flip and cook for an additional 1-2 minutes.</p>
+            </div>
+            <div class="step">
+                <strong>Step 4.</strong>
+                <p>During the last minute of cooking, place a slice of cheddar cheese on top of the patty and let it melt.</p>
+            </div>
+            <div class="step">
+                <strong>Step 5.</strong>
+                <p>Toast the buns on the skillet until golden brown, about 1-2 minutes.</p>
+            </div>
+            <div class="step">
+                <strong>Step 6.</strong>
+                <p>Assemble the burger by placing the cooked patty with cheese on the bottom bun, adding pickles, onions, and any other desired toppings.</p>
+            </div>
+            <div class="step">
+                <strong>Step 7.</strong>
+                <p>Top with the other half of the bun and serve immediately.</p>
+            </div>
+        </section>
+    </main>
+    <section id="suggested-recipes">
+        <h2>SUGGESTED RECIPE</h2>
+        <div class="background-suggested-recipes">
+            <div class="recipe-cards">
+                <div class="recipe-card">
+                    <a href="Chicken-Adobo.html">
+                        <img src="Recipe-Pages/recipePicture/ChickenAdobo.jpg" alt="Chicken Adobo" class="suggested-recipe-image">
+                        <h3 class="suggested-recipe-title">Chicken Adobo</h3>
+                    </a>
+                </div>
+                <div class="recipe-card">
+                    <a href="CaesarSalad.html">
+                        <img src="Recipe-Pages/recipePicture/CaesarSalad.jpg" alt="Caesar Salad" class="suggested-recipe-image">
+                        <h3 class="suggested-recipe-title">Caesar Salad</h3>
+                    </a>
+                </div>
+                <div class="recipe-card">
+                    <a href="Tasty-Mozarella-Buns.html">
+                        <img src="Recipe-Pages/recipePicture/TastyMozarellaBuns.jpg" alt="Tasty Mozarella Buns" class="suggested-recipe-image">
+                        <h3 class="suggested-recipe-title">Tasty Mozarella Buns</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Copyright © 2024 Culinaire. All Rights Reserved</p>
+    </footer>
+</body>
+</html>
+
