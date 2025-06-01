@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function () {
         option.innerHTML = `<h5 class="jost-semibold-30">${categoryLabel[i]}</h5>`;
         option.dataset.index = i; // Store the index in a data attribute
         option.addEventListener("click", () => selectOption(option)); // Add click event
-        optionContainer.appendChild(option);
+        optionContainer.append(option);
     }
 
     // Create items and store ranges for categories
