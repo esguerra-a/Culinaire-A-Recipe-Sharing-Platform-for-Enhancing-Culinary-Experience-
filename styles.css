@@ -1006,45 +1006,105 @@ h6 {
     width: 100%;
     justify-content: space-around;
     margin: 2rem 0;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .options-container {
-    display: flex; /* Use grid layout */
+    display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 5px;
+    justify-content: center;
+    gap: 15px;
     width: 100%;
     max-width: 80%;
     flex-wrap: nowrap;
-    transition: transform 0.5s ease-in-out;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
 }
 
-.option { 
+.options-container.slide-left {
+    animation: slideFromLeft 0.5s ease-out;
+}
+
+.options-container.slide-right {
+    animation: slideFromRight 0.5s ease-out;
+}
+
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.option {
     display: block;
-    flex: 1 1 15%; /* Equal size, shrinks below 15% of container */
-    max-width: 15%; /* Prevents items from growing too large */
-    aspect-ratio: 1; /* Ensures they stay circular (equal width & height) */
-    background-color: black; /* Primary background color */
-    border-radius: 50%; /* Circular shape */
+    flex: 1 1 15%;
+    max-width: 15%;
+    aspect-ratio: 1;
+    background-color: black;
+    border-radius: 50%;
     margin: 10px;
-    align-items: center; /* Center text vertically */
-    justify-content: center; /* Center text horizontally */
-    text-align: center; /* Ensure text alignment for multiline */
-    color: white; /* Text color for contrast */
-    /* Responsive font size */
-    padding: 5px; /* Add padding to prevent text from touching edges */
-    overflow: hidden; /* Hide overflowing text if necessary */
-    white-space: normal; /* Allow text to wrap */
-    word-break: break-word; /* Break long words if needed */
-    line-height: 1.1; /* Adjust line spacing for better readability */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    overflow: hidden;
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.1;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     filter: brightness(90%);
     border: 0.4rem solid var(--green);
-    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     user-select: none;
     box-shadow: 100px 100px 100px rgba(0, 0, 0, 0.3) inset;
+    position: relative;
+    opacity: 0;
+    animation: fadeInStagger 0.5s ease-out forwards;
+}
+
+/* Stagger animation delays */
+.option:nth-child(1) { animation-delay: 0.1s; }
+.option:nth-child(2) { animation-delay: 0.2s; }
+.option:nth-child(3) { animation-delay: 0.3s; }
+.option:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInStagger {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 .option h5 {
@@ -1053,30 +1113,100 @@ h6 {
     margin: 0;
     font-size: 1.5rem;
     align-content: center;
+    position: relative;
+    z-index: 2;
 }
 
 .option:hover {
-    opacity: 1; /* Fully visible on hover */
-    transform: scale(1.1); /* Slight zoom-in effect */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Enhances shadow on hover */
-    cursor: pointer; /* Changes cursor to pointer for interactivity */
+    opacity: 1;
+    transform: scale(1.15) translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.9), 0 0 25px rgba(25, 63, 1, 0.4);
+    cursor: pointer;
+    filter: brightness(110%);
 }
+
+.option:hover::after {
+    content: attr(data-recipe-count);
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--green);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 1;
+    animation: fadeInTooltip 0.3s ease-out;
+}
+
+@keyframes fadeInTooltip {
+    0% { opacity: 0; transform: translateX(-50%) translateY(-5px); }
+    100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
 .option.selected {
-    border-color:  var(--orange); /* Change border color to black when selected */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Enhance shadow for effect */
+    border-color: var(--orange);
+    box-shadow: 0 0 30px rgba(255, 165, 0, 0.6), 0 8px 30px rgba(0, 0, 0, 0.9);
+    transform: scale(1.15);
+    filter: brightness(120%);
+}
+
+.option.selected::before {
+    content: '✓';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--orange);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    z-index: 3;
+    animation: checkmarkPop 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes checkmarkPop {
+    0% { transform: scale(0) rotate(-180deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+
+/* Loading Skeleton */
+.skeleton-option {
+    display: block;
+    flex: 1 1 15%;
+    max-width: 15%;
+    aspect-ratio: 1;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 50%;
+    margin: 10px;
+    border: 0.4rem solid #ddd;
+}
+
+@keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
 }
 
 .recipes-grid-container {
     display: grid;
-    grid-template-columns: auto auto; /* Adjusts with content */
-    grid-template-rows: auto auto auto;
-    gap: 2rem;
-    padding:0px;
-    justify-content: center; /* Ensures the grid is centered horizontally */
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns for better space utilization */
+    gap: 2.5rem;
+    padding: 0;
+    justify-content: center;
     align-self: center;
-    margin: 0; /* Centers the container */
-    height: 90%;
-    width: 90%; /* Ensures it scales to smaller screens */
+    margin: 2rem auto;
+    width: 95%; /* Maximize screen space */
+    max-width: 1400px; /* Cap maximum width for very large screens */
 }
 
 /* Style for each div inside the grid */
@@ -1084,13 +1214,33 @@ h6 {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: stretch;
+    justify-content: flex-start;
     height: auto;
     width: 100%;
-    word-wrap:normal;
+    max-width: 100%;
+    word-wrap: normal;
     margin: 0;
     padding: 0;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.recipes-grid-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.recipes-grid-item a {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
 }
 
 .prev-btn, .next-btn {
@@ -1131,36 +1281,49 @@ h6 {
 }
 
 .recipes-grid-item-image{
-    width: 40vw; /* or a relative percentage */
-    height: 30vh;
+    width: 100%;
+    height: 280px;
     background-size: cover;
     background-position: center;
+    border-radius: 0;
+    flex-shrink: 0;
 }
 
-.recipes-grid-item div:hover {
-    opacity: 0.88;
+.recipes-grid-item-image:hover {
+    opacity: 0.95;
     transition: all 0.3s ease;
-    background-size: cover;
-    background-position: center;
 }
+
 .recipes-grid-item .text-wrapper {
-    position:relative;
-    padding: 10px;
-    text-align:justify;
+    position: relative;
+    padding: 1.25rem 1.5rem;
+    text-align: left;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .recipe-title {
     position: relative;
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-    color: black;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin: 0;
+    color: #1a1a1a;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .recipe-description {
     position: relative;
-    font-size: 0.9rem;
-    color: #555;
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
 }
 
 .recipe-description:hover {
@@ -1514,22 +1677,81 @@ footer {
         text-align: center;
     }
 
+    /* TABLET VIEW - 2 columns */
+    .recipes-grid-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        width: 92%;
+        gap: 2rem;
+    }
+
     /* RECIPES PAGE STYLES FOR MOBILE*/
     .search-container input {
         width: 100%;
     }
 
+    /* Center category heading on mobile */
+    #categories h2 {
+        text-align: center;
+    }
+
+    /* Adjust carousel for mobile - 2 categories visible */
+    .options-container {
+        max-width: 90%;
+        gap: 15px;
+        justify-content: center;
+    }
+
     .options-container .option {
-        border-width: 3px;
-        flex: 0 0 60%; /* Each option takes 60% of the container */
-        max-width: 25%; /* Ensure it doesn't exceed the size */
+        flex: 1 1 40%; /* Each option takes 40% to show 2 at a time */
+        max-width: 40%; /* Uniform size - 40% for 2 categories */
         aspect-ratio: 1; /* Maintain circular shape */
-        font-size: 0.9rem ;/* Increase font size for better visibility */
+        border-width: 0.3rem;
+        margin: 5px;
+    }
+
+    .skeleton-option {
+        flex: 1 1 40%;
+        max-width: 40%;
+        border-width: 0.3rem;
+        margin: 5px;
     }
 
     .option h5 {
-        font-size: 0.65rem;
+        font-size: 0.8rem;
     }
+
+    /* Adjust grid to single column on mobile */
+    .recipes-grid-container {
+        grid-template-columns: 1fr !important;
+        width: 95% !important;
+        gap: 1.5rem;
+    }
+
+    /* Center recipes heading on mobile */
+    .recipes-heading {
+        text-align: center;
+        margin: 1.5rem 0;
+    }
+
+    /* Uniform recipe card sizing on mobile */
+    .recipes-grid-item {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .recipes-grid-item a {
+        width: 100% !important;
+        display: block;
+    }
+
+    .recipes-grid-item-image {
+        width: 100% !important;
+        height: 250px !important;
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+    }
+
     .recipe-description {
         word-wrap: break-word;
         font-size: 1rem;
@@ -1542,24 +1764,8 @@ footer {
         color: black;
         text-align: left;
     }
-    
-    .recipes-grid-item div {
-        width: auto; /* or a relative percentage */
-        height: rem;
-        background-size: cover;
-        background-position: center;
-    }
 
     #forYouRecipes-lbl {
         font-size: medium;
-    }
-
-    .recipes-grid-container {
-        grid-template-columns: 1fr;
-        
-    }
-
-    .recipes-grid-item-image {
-        width: 80%; /* or a relative percentage */
     } 
 } 
