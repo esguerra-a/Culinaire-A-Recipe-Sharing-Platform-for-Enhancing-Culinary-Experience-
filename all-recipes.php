@@ -84,7 +84,35 @@
         // Initialize page
         document.addEventListener('DOMContentLoaded', async function() {
             await loadCategories();
-            await loadDefaultRecipes();
+
+            // Check if category parameter exists in URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoryParam = urlParams.get('category');
+
+            if (categoryParam && allCategories.length > 0) {
+                // Find the category in our list
+                const categoryIndex = allCategories.findIndex(cat => cat.strCategory === categoryParam);
+
+                if (categoryIndex !== -1) {
+                    // Navigate to the page containing this category
+                    const pageIndex = Math.floor(categoryIndex / visibleCategoryCount);
+                    currentCategoryIndex = pageIndex * visibleCategoryCount;
+                    renderCategories();
+
+                    // Auto-select the category
+                    setTimeout(() => {
+                        const categoryElement = document.querySelector(`[data-category="${categoryParam}"]`);
+                        if (categoryElement) {
+                            selectCategory(categoryParam, categoryElement);
+                        }
+                    }, 100);
+                } else {
+                    await loadDefaultRecipes();
+                }
+            } else {
+                await loadDefaultRecipes();
+            }
+
             setupEventListeners();
             setupKeyboardNavigation();
             setupTouchGestures();
