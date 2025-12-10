@@ -202,14 +202,12 @@
                 if (data.success && data.blog) {
                     currentBlog = data.blog;
 
-                    // Populate form
                     document.getElementById('blog-id').value = data.blog.id;
                     document.getElementById('title').value = data.blog.title;
                     document.getElementById('author').value = data.blog.author;
                     document.getElementById('excerpt').value = data.blog.excerpt;
                     document.getElementById('content').value = data.blog.content;
 
-                    // Show current images
                     document.getElementById('current-thumbnail').src = data.blog.thumbnail_path;
                     document.getElementById('current-banner').src = data.blog.banner_path;
                 } else {
@@ -229,7 +227,6 @@
             const submitBtn = document.getElementById('submitBtn');
             const errorContainer = document.getElementById('errorContainer');
 
-            // Disable submit button
             submitBtn.disabled = true;
             submitBtn.textContent = 'Updating...';
             errorContainer.style.display = 'none';
@@ -242,7 +239,6 @@
                 content: document.getElementById('content').value
             };
 
-            // Convert to URL-encoded format for PUT request
             const urlEncodedData = new URLSearchParams(formData).toString();
 
             try {
@@ -258,7 +254,6 @@
 
                 if (data.success) {
                     alert('Blog updated successfully!');
-                    // Reload to get updated slug if title changed
                     const updatedResponse = await fetch(`api/blogs/read-single.php?id=${formData.id}`);
                     const updatedData = await updatedResponse.json();
                     if (updatedData.success) {

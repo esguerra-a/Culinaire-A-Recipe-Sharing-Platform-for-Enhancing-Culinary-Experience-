@@ -35,7 +35,6 @@
             <div class="carousel-wrapper">
                 <button class="prev-btn" id="prevCategoryBtn"><i class="fa fa-chevron-left"></i></button>
                 <div class="options-container">
-                    <!-- Categories will be dynamically loaded here -->
                 </div>
                 <button class="next-btn" id="nextCategoryBtn"><i class="fa fa-chevron-right"></i></button>
             </div>
@@ -46,7 +45,6 @@
         <div id="forYouRecipes">
             <h2 class="julius-green recipes-heading">Recipes</h2>
             <div class="recipes-grid-container">
-                <!-- Recipes will be dynamically generated here -->
             </div>
             <div class="pagination" style="display: none;">
                 <button id="prevGridBtn" class="pagination-btn">Prev</button>
@@ -62,7 +60,6 @@
     <script src="scripts.js"></script>
     <script src="js/recipe-handler.js"></script>
     <script>
-        // State management
         let allCategories = [];
         let currentCategoryIndex = 0;
         let visibleCategoryCount = getVisibleCategoryCount();
@@ -74,32 +71,25 @@
         let touchStartX = 0;
         let touchEndX = 0;
 
-        /**
-         * Get visible category count based on screen size
-         */
         function getVisibleCategoryCount() {
             return window.innerWidth <= 768 ? 2 : 4;
         }
 
-        // Initialize page
         document.addEventListener('DOMContentLoaded', async function() {
             await loadCategories();
 
-            // Check if category parameter exists in URL
             const urlParams = new URLSearchParams(window.location.search);
             const categoryParam = urlParams.get('category');
 
             if (categoryParam && allCategories.length > 0) {
-                // Find the category in our list
                 const categoryIndex = allCategories.findIndex(cat => cat.strCategory === categoryParam);
 
                 if (categoryIndex !== -1) {
-                    // Navigate to the page containing this category
+                
                     const pageIndex = Math.floor(categoryIndex / visibleCategoryCount);
                     currentCategoryIndex = pageIndex * visibleCategoryCount;
                     renderCategories();
 
-                    // Auto-select the category
                     setTimeout(() => {
                         const categoryElement = document.querySelector(`[data-category="${categoryParam}"]`);
                         if (categoryElement) {
@@ -119,9 +109,6 @@
             setupResizeHandler();
         });
 
-        /**
-         * Handle window resize to adjust visible categories
-         */
         function setupResizeHandler() {
             let resizeTimer;
             window.addEventListener('resize', () => {
@@ -130,16 +117,13 @@
                     const newCount = getVisibleCategoryCount();
                     if (newCount !== visibleCategoryCount) {
                         visibleCategoryCount = newCount;
-                        currentCategoryIndex = 0; // Reset to first page
+                        currentCategoryIndex = 0; 
                         renderCategories();
                     }
                 }, 250);
             });
         }
 
-        /**
-         * Setup event listeners
-         */
         function setupEventListeners() {
             document.getElementById('searchButton').addEventListener('click', searchRecipes);
             document.getElementById('searchInput').addEventListener('keypress', function(e) {
@@ -160,12 +144,8 @@
             });
         }
 
-        /**
-         * Setup keyboard navigation
-         */
         function setupKeyboardNavigation() {
             document.addEventListener('keydown', (e) => {
-                // Only activate if not typing in input field
                 if (document.activeElement.tagName === 'INPUT') return;
 
                 if (e.key === 'ArrowLeft') {
@@ -180,9 +160,6 @@
             });
         }
 
-        /**
-         * Setup touch/swipe gestures for mobile
-         */
         function setupTouchGestures() {
             const container = document.querySelector('.options-container');
 
@@ -196,29 +173,21 @@
             });
         }
 
-        /**
-         * Handle swipe gesture
-         */
         function handleSwipe() {
             const swipeThreshold = 50;
             const diff = touchStartX - touchEndX;
 
             if (Math.abs(diff) > swipeThreshold) {
                 if (diff > 0) {
-                    // Swipe left - show next
                     slideDirection = 'right';
                     nextCategory();
                 } else {
-                    // Swipe right - show prev
                     slideDirection = 'left';
                     prevCategory();
                 }
             }
         }
 
-        /**
-         * Load categories from MealDB
-         */
         async function loadCategories() {
             const container = document.querySelector('.options-container');
             showLoadingSkeleton(container);
@@ -233,9 +202,6 @@
             renderCategories();
         }
 
-        /**
-         * Show loading skeleton for categories
-         */
         function showLoadingSkeleton(container) {
             container.innerHTML = '';
             for (let i = 0; i < visibleCategoryCount; i++) {
@@ -245,16 +211,12 @@
             }
         }
 
-        /**
-         * Render visible categories in the carousel
-         */
         function renderCategories() {
             const container = document.querySelector('.options-container');
 
-            // Add slide animation class
             if (slideDirection) {
                 container.classList.remove('slide-left', 'slide-right');
-                void container.offsetWidth; // Force reflow
+                void container.offsetWidth; 
                 container.classList.add(slideDirection === 'left' ? 'slide-left' : 'slide-right');
                 slideDirection = '';
             }
@@ -269,7 +231,7 @@
                 option.className = 'option';
                 option.style.backgroundImage = `url(${category.strCategoryThumb})`;
                 option.dataset.category = category.strCategory;
-                option.dataset.recipeCount = '25+ recipes'; // Placeholder - MealDB doesn't provide exact counts
+                option.dataset.recipeCount = '25+ recipes';
 
                 const heading = document.createElement('h5');
                 heading.className = 'jost-semibold-30';
@@ -282,13 +244,9 @@
 
         }
 
-        /**
-         * Navigate to previous set of categories (with infinite loop)
-         */
         function prevCategory() {
             currentCategoryIndex -= visibleCategoryCount;
 
-            // Loop to the end if we go below 0
             if (currentCategoryIndex < 0) {
                 const totalPages = Math.ceil(allCategories.length / visibleCategoryCount);
                 currentCategoryIndex = (totalPages - 1) * visibleCategoryCount;
@@ -296,34 +254,25 @@
 
             renderCategories();
 
-            // Re-apply selection if a category was selected
             if (currentCategory) {
                 highlightSelectedCategory();
             }
         }
 
-        /**
-         * Navigate to next set of categories (with infinite loop)
-         */
         function nextCategory() {
             currentCategoryIndex += visibleCategoryCount;
 
-            // Loop back to start if we reach the end
             if (currentCategoryIndex >= allCategories.length) {
                 currentCategoryIndex = 0;
             }
 
             renderCategories();
 
-            // Re-apply selection if a category was selected
             if (currentCategory) {
                 highlightSelectedCategory();
             }
         }
 
-        /**
-         * Highlight the currently selected category
-         */
         function highlightSelectedCategory() {
             document.querySelectorAll('.option').forEach(opt => {
                 if (opt.dataset.category === currentCategory) {
@@ -334,29 +283,22 @@
             });
         }
 
-        /**
-         * Select a category
-         */
         async function selectCategory(categoryName, element) {
             const container = document.querySelector('.recipes-grid-container');
 
-            // Toggle selection
             if (currentCategory === categoryName) {
                 currentCategory = null;
                 element.classList.remove('selected');
                 await loadDefaultRecipes();
             } else {
-                // Remove previous selection
                 document.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
 
                 currentCategory = categoryName;
                 element.classList.add('selected');
 
-                // Load meals for this category
                 RecipeRenderer.showLoading(container);
                 const meals = await MealDBAPI.getMealsByCategory(categoryName);
 
-                // Fetch full details for each meal (MealDB filter endpoint only returns limited data)
                 const detailedMeals = [];
                 for (const meal of meals.slice(0, 12)) { // Limit to 12 meals
                     const fullMeal = await MealDBAPI.getMealDetails(meal.idMeal);
@@ -367,7 +309,6 @@
                 currentPage = 0;
                 renderMeals();
 
-                // Auto-scroll to recipes section
                 setTimeout(() => {
                     const recipesSection = document.getElementById('forYouRecipesSection');
                     recipesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -375,9 +316,6 @@
             }
         }
 
-        /**
-         * Load default recipes (random meals)
-         */
         async function loadDefaultRecipes() {
             const container = document.querySelector('.recipes-grid-container');
             RecipeRenderer.showLoading(container);
@@ -387,9 +325,6 @@
             renderMeals();
         }
 
-        /**
-         * Render meals in the grid
-         */
         function renderMeals() {
             const container = document.querySelector('.recipes-grid-container');
             container.innerHTML = '';
@@ -409,7 +344,6 @@
                 container.appendChild(item);
             });
 
-            // Show/hide pagination
             if (allMeals.length > mealsPerPage) {
                 document.querySelector('.pagination').style.display = 'flex';
                 updatePaginationButtons();
@@ -418,9 +352,6 @@
             }
         }
 
-        /**
-         * Update pagination button states
-         */
         function updatePaginationButtons() {
             const prevBtn = document.getElementById('prevGridBtn');
             const nextBtn = document.getElementById('nextGridBtn');
@@ -429,9 +360,6 @@
             nextBtn.disabled = (currentPage + 1) * mealsPerPage >= allMeals.length;
         }
 
-        /**
-         * Navigate to next page of recipes
-         */
         function nextGrid() {
             if ((currentPage + 1) * mealsPerPage < allMeals.length) {
                 currentPage++;
@@ -440,9 +368,6 @@
             }
         }
 
-        /**
-         * Navigate to previous page of recipes
-         */
         function prevGrid() {
             if (currentPage > 0) {
                 currentPage--;
@@ -451,9 +376,6 @@
             }
         }
 
-        /**
-         * Search recipes
-         */
         async function searchRecipes() {
             const query = document.getElementById('searchInput').value.trim();
             const container = document.querySelector('.recipes-grid-container');
