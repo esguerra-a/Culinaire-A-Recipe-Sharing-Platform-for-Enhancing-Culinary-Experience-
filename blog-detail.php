@@ -148,8 +148,8 @@
     <!-- Delete Confirmation Modal -->
     <div id="deleteModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000; align-items:center; justify-content:center;">
         <div style="background:white; padding:40px; border-radius:10px; max-width:500px; text-align:center;">
-            <h2 style="color: var(--green); margin-bottom: 20px;">Confirm Delete</h2>
-            <p style="margin-bottom: 30px;">Are you sure you want to delete this blog post? This action cannot be undone.</p>
+            <h2 class="jost-semibold-30">Confirm Delete</h2>
+            <p class="jost-normal">Are you sure you want to delete this blog post? This action cannot be undone.</p>
             <div style="display: flex; gap: 15px; justify-content: center;">
                 <button class="view-button" onclick="confirmDelete()">Yes, Delete</button>
                 <button class="view-button" onclick="closeDeleteModal()" style="background-color: #666;">Cancel</button>

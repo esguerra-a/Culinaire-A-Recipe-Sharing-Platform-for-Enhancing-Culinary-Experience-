@@ -494,7 +494,7 @@ h6 {
     font-family: "Jost", sans-serif;
     font-size: 1rem;
     padding: 10px 20px;
-    margin: 3em auto;
+    margin: 1em auto;
     color: white;
     background-color: var(--green);
     border: none;
@@ -590,7 +590,16 @@ h6 {
 
 .category-grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 40px;
+    justify-self: center;
+    align-self: center;
+}
+
+.members-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 40px;
     justify-self: center;
@@ -942,7 +951,7 @@ h6 {
 }
 
 #forYouRecipesSection{
-    background-color: #DED369;
+    background-color: rgba(222, 211, 105, 0.6);
     margin: 2rem 0;
 }
 

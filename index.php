@@ -140,7 +140,7 @@
                     div.className = 'item-container category-item';
                     div.style.backgroundImage = `url(${category.strCategoryThumb})`;
                     div.innerHTML = `
-                        <a href="all-recipes.php?category=${encodeURIComponent(category.strCategory)}" class="item-link jost-semibold-30" style="grid-column: span 2;">
+                        <a href="all-recipes.php?category=${encodeURIComponent(category.strCategory)}" class="item-link jost-semibold-30">
                             <h3 class="item-name">${category.strCategory}</h3>
                         </a>
                     `;
