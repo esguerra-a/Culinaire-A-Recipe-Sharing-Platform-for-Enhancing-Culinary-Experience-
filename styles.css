@@ -752,6 +752,8 @@ h6 {
 
 .item-image {
     border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .blog-link {
@@ -823,7 +825,7 @@ h6 {
 
 .blog-detail-banner {
     position: relative;
-    margin: 4rem 2rem;
+    margin: 2rem;
     background-size: cover;
     background-position: center;
     max-width: 100%;

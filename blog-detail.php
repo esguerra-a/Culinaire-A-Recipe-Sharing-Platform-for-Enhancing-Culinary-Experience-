@@ -5,90 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Culinaire</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .blog-detail-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 30px;
-            max-width: 1200px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-
-        .blog-detail-banner {
-            width: 100%;
-            height: 400px;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: flex-end;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
-        .blog-detail-author {
-            padding: 10px 20px;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .blog-post {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-        }
-
-        .blog-post h1 {
-            color: var(--green);
-            margin-bottom: 10px;
-        }
-
-        .blog-post-date {
-            color: #666;
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-
-        .blog-detail-sidebar {
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 10px;
-            height: fit-content;
-        }
-
-        .blog-detail-sidebar h2 {
-            color: var(--green);
-            margin-bottom: 15px;
-        }
-
-        .recent-post {
-            display: block;
-            margin-bottom: 15px;
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .recent-post img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 5px;
-            margin-bottom: 5px;
-        }
-
-        .recent-post h3 {
-            font-size: 16px;
-            color: var(--green);
-        }
-
-        @media (max-width: 768px) {
-            .blog-detail-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="recipe-detailed-style.css">
 </head>
 <body>
     <header class="non-index-title-bar">
@@ -107,6 +24,11 @@
     </header>
 
     <main>
+        <header class="recipe-header">
+            <div class="container-flex">
+                <a href="blogs.php" class="back-link">← Back to Blogs</a>
+            </div>
+        </header>
         <div class="blog-detail-grid">
             <div>
                 <div class="blog-detail-banner" id="blog-banner">
@@ -123,15 +45,14 @@
                     <p class="blog-post-date" id="blog-date"></p>
                     <div id="blog-content"></div>
 
-                    <div style="margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap;">
+                    <div>
                         <a href="blog-edit.php?id=" id="edit-link">
                             <button class="view-button">Edit Blog</button>
                         </a>
                         <button class="view-button" onclick="deleteBlog()"
-                                style="background-color: #d32f2f;">Delete Blog</button>
-                        <a href="blogs.php">
-                            <button class="view-button" style="background-color: #666;">Back to Blogs</button>
-                        </a>
+                                style="background-color: #d32f2f;">Delete Blog
+                        </button>
+
                     </div>
                 </article>
             </div>
@@ -151,7 +72,7 @@
             <h2 class="jost-semibold-30">Confirm Delete</h2>
             <p class="jost-normal">Are you sure you want to delete this blog post? This action cannot be undone.</p>
             <div style="display: flex; gap: 15px; justify-content: center;">
-                <button class="view-button" onclick="confirmDelete()">Yes, Delete</button>
+                <button class="view-button" style="background-color: red;" onclick="confirmDelete()">Yes, Delete</button>
                 <button class="view-button" onclick="closeDeleteModal()" style="background-color: #666;">Cancel</button>
             </div>
         </div>
