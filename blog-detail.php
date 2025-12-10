@@ -27,7 +27,6 @@
         }
 
         .blog-detail-author {
-            background: rgba(255, 255, 255, 0.9);
             padding: 10px 20px;
             border-radius: 5px;
             display: flex;

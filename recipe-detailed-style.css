@@ -22,6 +22,8 @@ body {
     justify-content: space-between;
     padding: 0.5em 1.5em !important;
     background-color: var(--green);
+    position: sticky;
+    top: 0;
 }
 
 .non-index-nav-container {
