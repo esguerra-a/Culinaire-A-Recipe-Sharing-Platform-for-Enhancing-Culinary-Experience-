@@ -26,17 +26,17 @@
         <div id="blogs-header-container" class="header-container">
             <h1 class="main-header inria-serif-white"><b>BLOGS</b></h1>
             <h3 class="sub-header inria-serif-white">Cooking Tips & Reviews</h3>
-        </div>
+        </div>          
 
         <section class="section-container">
-            <div style="text-align: right; margin-bottom: 20px;">
+            <div id="no-blogs-container"></div>
+            <div style="margin-bottom: 20px;">
                 <a href="blog-create.php">
                     <button class="view-button">Create New Blog</button>
                 </a>
             </div>
 
             <div id="blogs-grid-container" class="grid-container">
-                <!-- Blogs will be loaded here dynamically -->
                 <p style="text-align: center; padding: 40px;">Loading blogs...</p>
             </div>
         </section>
@@ -55,6 +55,7 @@
                 const response = await fetch('api/blogs/read.php');
                 const data = await response.json();
 
+                const noBlogsContainer = document.getElementById('no-blogs-container');
                 const container = document.getElementById('blogs-grid-container');
                 container.innerHTML = '';
 
@@ -80,10 +81,10 @@
                         container.appendChild(article);
                     });
                 } else {
-                    container.innerHTML = `
+                    noBlogsContainer.innerHTML = `
                         <div style="text-align: center; padding: 40px;">
                             <p>No blogs available yet.</p>
-                            <p><a href="blog-create.php"><button class="view-button">Create the First Blog</button></a></p>
+                            <p>Create the First Blog</p>
                         </div>
                     `;
                 }
