@@ -129,11 +129,10 @@ body {
     margin-bottom: 2rem;
     list-style-position: inside;
     margin-top: 2%;
-    margin-left: 11%;
+    margin-left: 11%;   
 }
 
 .recipe-meta .meta-item:nth-child(2){
-    border-right: 1px solid black;
     border-left: 1px solid black;
 }
 

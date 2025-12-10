@@ -178,7 +178,7 @@ h6 {
 
 /* BLOGS <MAIN> STYLES*/
 #blogs-header-container {
-    background-image: url(Blogs_Images/blogs-header.jpg);
+    background-image: url(Blogs_Images/blogs-header.jpg) !important;
 }
 
 /*ABOUT US <MAIN> STYLES */
@@ -225,7 +225,7 @@ h6 {
     align-content: center;
     padding: 50px 0;
     margin: 0px;
-    width: inherit;
+    width: 100%;
     max-width: 1920px;
     height: 500px;
     justify-self: center;
@@ -459,7 +459,8 @@ h6 {
     font-weight: bold;
     display: block;
     justify-content: center;
-    width: 330px;
+    align-items: center;
+    width: 100%;
 }
 
 .profile-flex-item h6 {
@@ -589,7 +590,7 @@ h6 {
 
 .category-grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr 1fr;
     gap: 40px;
     justify-self: center;
